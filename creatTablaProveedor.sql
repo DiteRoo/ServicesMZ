@@ -1,5 +1,5 @@
 CREATE Table Proveedor(
-	id Serial PRIMARY KEY,
+	id serial PRIMARY KEY,
 	nombre varchar(200),
 	telefono varchar(200),
 	direccion varchar(200),
