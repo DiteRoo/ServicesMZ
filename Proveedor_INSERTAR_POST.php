@@ -5,14 +5,15 @@
 		try{
 			$datos = json_decode(file_get_contents("php://input"),true);
 
-			$nombre = $datos["nombre"]; // obtener parametros POST
+            $id = $datos["id"]
+            $nombre = $datos["nombre"]; // obtener parametros POST
             $telefono = $datos["telefono"];
             $direccion = $datos["direccion"];
             $correo= $datos["correo"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"INSERT INTO proveedor Values(?,?,?,?)",
-				array($nombre,$telefono,$direccion,$correo)
+				"INSERT INTO proveedor Values(?,?,?,?,?)",
+				array($id, $nombre, $telefono,$direccion,$correo)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta>0){
                 echo json_encode(array(
