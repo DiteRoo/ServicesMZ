@@ -6,10 +6,10 @@
 			//$id = $_GET['id']; // obtener parametros GET
 			$respuesta = SQLGlobal::selectArray("select * FROM proveedor");//sin filtro ("No incluir filtros ni '?'")
 			echo json_encode(array(
-				'respuesta'=>'200',
-				'estado' => 'Se obtuvieron los datos correctamente',
+			//	'respuesta'=>'200',
+			//	'estado' => 'Se obtuvieron los datos correctamente',
 				'data'=>$respuesta,
-				'error'=>''
+			//	'error'=>''
 			));
 		}catch(PDOException $e){
 			echo json_encode(
