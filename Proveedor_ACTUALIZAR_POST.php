@@ -5,15 +5,15 @@
 		try{
 			$datos = json_decode(file_get_contents("php://input"),true);
 
-            $codigo = $datos["codigo"];
+            #$codigo = $datos["codigo"];
             $nombre = $datos["nombre"]; // obtener parametros POST
             $telefono = $datos["telefono"];
             $direccion = $datos["direccion"];
             $correo= $datos["correo"];
 
 			$respuesta = SQLGlobal::cudFiltro(
-				"UPDATE proveedor SET nombre = ?, telefono = ?, direccion = ?, correo = ? WHERE Id = ?",
-				array($nombre,$telefono,$direccion,$correo,$codigo)
+				"UPDATE Proveedor SET telefono = ?, direccion = ?, correo = ? WHERE nombre = ?",
+				array($telefono,$direccion,$correo,$nombre)
             );//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta>0){
                 echo json_encode(array(
