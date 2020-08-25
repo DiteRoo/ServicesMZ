@@ -11,7 +11,7 @@
             $correo= $datos["correo"];
 
 			$respuesta = SQLGlobal::cudFiltro(
-				"UPDATE Producto SET telefono = ?, direccion = ?, correo = ? WHERE nombre = ?",
+				"UPDATE proveedor SET telefono = ?, direccion = ?, correo = ? WHERE nombre = ?",
 				array($telefono,$direccion,$correo,$nombre)
             );//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta>0){
