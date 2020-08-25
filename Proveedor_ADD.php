@@ -5,7 +5,7 @@
 		try{
             $datos = json_decode(file_get_contents("php://input"),true);
             
-            $codigo = $datos["id"]
+            #$codigo = $datos["id"]
             $nombre = $datos["nombre"]
 			$telefono = $datos["telefono"]
 			$direccion = $datos["direccion"]
@@ -14,8 +14,8 @@
 			//$id = $datos["id"]; // obtener parametros GET
 			//$respuesta = SQLGlobal::query("QUERY");//sin filtro ("No incluir filtros ni '?'")
 			$respuesta = SQLGlobal::cudFiltro(
-				"INSERT INTO Proveedor Values(?,?,?,?,?)",
-				array($codigo, $nombre, $telefono, $direccion, $correo)
+				"INSERT INTO Proveedor Values(?,?,?,?)",
+				array($nombre, $telefono, $direccion, $correo)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta > 0){
                 echo json_encode(array(
