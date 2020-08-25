@@ -12,7 +12,7 @@
             $correo= $datos["correo"];
 
             $respuesta = SQLGlobal::cudFiltro(
-				"INSERT INTO proveedor Values(?,?,?,?,?)",
+				"INSERT INTO proveedor Values (?,?,?,?)",
 				array($nombre, $telefono,$direccion,$correo)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta>0){
