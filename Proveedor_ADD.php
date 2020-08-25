@@ -12,7 +12,7 @@
 
 			//$id = $datos["id"]; // obtener parametros GET
 			//$respuesta = SQLGlobal::query("QUERY");//sin filtro ("No incluir filtros ni '?'")
-			$respuesta = SQLGlobal::queryFiltro(
+			$respuesta = SQLGlobal::cudFiltro(
 				"INSERT INTO proveedor Values(?,?,?,?)",
 				array($nombre, $telefono, $direccion, $correo)
 			);//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
