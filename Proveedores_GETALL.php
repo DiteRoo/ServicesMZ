@@ -8,7 +8,7 @@
 			echo json_encode(array(
 			//	'respuesta'=>'200',
 			//	'estado' => 'Se obtuvieron los datos correctamente',
-				'data'=>$respuesta,
+				$respuesta,
 			//	'error'=>''
 			));
 		}catch(PDOException $e){
