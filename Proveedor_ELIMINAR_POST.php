@@ -7,7 +7,7 @@
 
 			$nombre = $datos["nombre"]; // obtener parametros GET
 			$respuesta = SQLGlobal::cudFiltro(
-				"DELETE FROM proveedor (nombre) WHERE nombre = ?",
+				"DELETE FROM proveedor WHERE nombre = ?",
 				array($nombre)
             );//con filtro ("El tamaño del array debe ser igual a la cantidad de los '?'")
             if($respuesta>0){
