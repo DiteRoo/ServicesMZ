@@ -6,10 +6,10 @@
             $datos = json_decode(file_get_contents("php://input"),true);
             
             #$codigo = $datos["id"]
-            $nombre = $datos["nombre"]
-			$telefono = $datos["telefono"]
-			$direccion = $datos["direccion"]
-			$correo = $datos["correo"]
+            $nombre = $datos["nombre"];
+			$telefono = $datos["telefono"];
+			$direccion = $datos["direccion"];
+			$correo = $datos["correo"];
 
 			//$id = $datos["id"]; // obtener parametros GET
 			//$respuesta = SQLGlobal::query("QUERY");//sin filtro ("No incluir filtros ni '?'")
