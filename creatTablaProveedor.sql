@@ -9,7 +9,7 @@ CREATE Table Proveedor(
 
 INSERT 
 INTO Proveedor(nombre,telefono,direccion,correo)
-VALUES ('Coca-cola', '96772623', 'Picarte 303', 'coca-cola@hotmail.com')
+VALUES ('Pepsi', '96772623', 'Picarte 303', 'coca-cola@hotmail.com')
 
 INSERT 
 INTO Proveedor(nombre,telefono,direccion,correo)
